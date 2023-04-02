@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cal.css">
+    <script>
+        function display(val){
+            document.getElementById("display").value+=val;
+        }
+        function solve(){
+            let x=document.getElementById("display").value;
+            let y=eval(x);
+            document.getElementById("display").value=y;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <div class="output">
+            <h1><i class="fa-solid fa-calculator fa-bounce fa-2xl"> </i> simple calculator 
+                <i class="fa-solid fa-calculator fa-bounce fa-2xl"> </i></h1>
+                <input type="text" id="display"/>
+        </div>
+        <div class="cal">
+        <button id="opreand" type="button" value="7"  onclick="display('7')">7</button>
+        <button id="opreand" type="button"  onclick="display('8')" >8</button>
+        <button id="opreand" type="button" onclick="display('9')">9</button>
+        <button id="operator" type="button" onclick="display('/')">/</button>
+
+        <br>
+        <button id="opreand" type="button"  onclick="display('4')">4</button>
+        <button id="opreand" type="button" onclick="display('5')">5</button>
+        <button id="opreand" type="button" onclick="display('6')">6</button>
+        <button id="operator" type="button"onclick="display('*')">x</button>
+        
+        <br>
+        <button id="opreand" type="button" onclick="display('1')">1</button>
+        <button id="opreand" type="button" onclick="display('2')">2</button>
+        <button id="opreand" type="button" onclick="display('3')">3</button>
+        <button id="operator" type="button" onclick="display('-')">-</button>
+        
+        <br>
+        <button  class="val" id="opreand"  type="button" onclick="display('0')" >0</button>
+        <button id="operator" type="button" onclick="display('.')">.</button>
+        <button id="operator" type="button" onclick="display('+')">+</button>
+        <button id="operator" type="button"  onclick="solve()">=</button>
+        
+        
+        <br>
+    </div>
+</center>
+</body>
+
+</html>
